@@ -11,9 +11,10 @@ Data covers ~20,000 journals from the 2024 Journal Citation Reports.
 
 ## Download
 
-### ⬇️ [Download the latest plugin (.xpi)](https://github.com/hockeykharlamov/journal-impact-factor-zotero-plugin/raw/main/build/journal-impact-factor.xpi)
+### ⬇️ [Download the latest plugin (.xpi)](https://github.com/hockeykharlamov/journal-impact-factor-zotero-plugin/releases/latest/download/journal-impact-factor.xpi)
 
-Click the link above to download `journal-impact-factor.xpi` to your computer.
+Click the link above to download `journal-impact-factor.xpi` to your computer. You can
+also browse all versions on the [Releases page](https://github.com/hockeykharlamov/journal-impact-factor-zotero-plugin/releases).
 
 > **Tip:** If your browser opens the file as text instead of downloading it, right-click the link and choose **"Save Link As…"**.
 
