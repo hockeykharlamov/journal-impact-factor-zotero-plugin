@@ -131,8 +131,8 @@ script exits with a clear error rather than silently producing an empty index.
 
 ## Installing the Plugin
 1. Open Zotero
-2. Go to Tools → Add-ons
-3. Click the gear icon → "Install Add-on From File…"
+2. Go to Tools → Plugins
+3. Click the gear icon → "Install Plugin From File…"
 4. Select `build/journal-impact-factor.xpi`
 5. Restart Zotero
 6. Right-click library column headers → enable "JIF 2024" column

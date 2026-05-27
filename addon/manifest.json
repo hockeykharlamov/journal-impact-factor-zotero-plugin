@@ -1,14 +1,15 @@
 {
   "manifest_version": 2,
   "name": "Journal Impact Factor",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Displays 2024 Journal Impact Factor (JIF) for journal articles in the Zotero library.",
   "author": "Journal Impact Factor Plugin",
   "applications": {
     "zotero": {
       "id": "journal-impact-factor@zotero.org",
-      "strict_min_version": "6.999",
-      "strict_max_version": "9.0.*"
+      "update_url": "https://raw.githubusercontent.com/hockeykharlamov/journal-impact-factor-zotero-plugin/main/update.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "9.0.99"
     }
   }
 }

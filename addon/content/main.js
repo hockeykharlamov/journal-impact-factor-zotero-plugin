@@ -47,13 +47,9 @@
   }
 
   function formatDetail(entry) {
-    if (!entry) return '';
-    const parts = [];
-    if (entry.j != null) parts.push(`JIF: ${entry.j}`);
-    if (entry.f != null) parts.push(`5-yr: ${entry.f}`);
-    if (entry.q)          parts.push(entry.q);
-    if (entry.r)          parts.push(`Rank: ${entry.r}`);
-    return parts.join('  |  ');
+    if (!entry || entry.j == null) return '';
+    const value = entry.q ? `${entry.j} (${entry.q})` : String(entry.j);
+    return `Impact Factor: ${value}`;
   }
 
   // ── Plugin class ────────────────────────────────────────────────────────────

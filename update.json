@@ -1,0 +1,18 @@
+{
+  "addons": {
+    "journal-impact-factor@zotero.org": {
+      "updates": [
+        {
+          "version": "1.0.2",
+          "update_link": "https://raw.githubusercontent.com/hockeykharlamov/journal-impact-factor-zotero-plugin/main/build/journal-impact-factor.xpi",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "7.0",
+              "strict_max_version": "9.0.99"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
