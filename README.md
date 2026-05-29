@@ -86,10 +86,10 @@ the dataset. This is expected for newer, regional, or non-indexed journals.
 ## Privacy
 
 Once every 24 hours, the plugin sends an anonymous heartbeat to a server we run
-(`jif-update.evanowbaxter.workers.dev`) so we can count how many people use the
-plugin. The request includes only the plugin version. Your IP address is visible
-to the server as part of normal HTTP routing; we do not store any personally
-identifying information about your library, your items, or your queries.
+so we can count how many people use the plugin. The request includes only the
+plugin version. Your IP address is visible to the server as part of normal HTTP
+routing; we do not store any personally identifying information about your
+library, your items, or your queries.
 
 The same server also serves the auto-update manifest that Zotero checks
 periodically — this is standard behavior for any Zotero plugin that supports
