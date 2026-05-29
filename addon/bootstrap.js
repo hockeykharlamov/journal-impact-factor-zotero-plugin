@@ -4,6 +4,26 @@ var JIF;
 var _startupPromise = null;
 var _shutdownRequested = false;
 
+const PING_URL = "https://jif-update.evanowbaxter.workers.dev/ping";
+const PING_PREF = "extensions.journal-impact-factor.lastPing";
+const PING_INTERVAL_MS = 24 * 60 * 60 * 1000;
+
+// Fire-and-forget: once per 24h per install, POST a heartbeat so we can count
+// active installs. Wrapped to never throw and never block startup.
+function maybePingHome(version) {
+  try {
+    const last = Number(Zotero.Prefs.get(PING_PREF, true) || 0);
+    const now = Date.now();
+    if (now - last < PING_INTERVAL_MS) return;
+    Zotero.Prefs.set(PING_PREF, String(now), true);
+    fetch(PING_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ v: version }),
+    }).catch(() => {});
+  } catch (e) {}
+}
+
 // startup is async: we must wait for Zotero to finish initializing before
 // touching any Zotero.* API (ItemTreeManager, ItemPaneManager, etc.).
 async function startup({ id, version, rootURI }) {
@@ -20,6 +40,8 @@ async function startup({ id, version, rootURI }) {
 
     JIF = new globalThis.JIFPlugin(rootURI);
     await JIF.startup();
+
+    maybePingHome(version);
   })();
   await _startupPromise;
 }
